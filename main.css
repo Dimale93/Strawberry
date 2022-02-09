@@ -1,0 +1,151 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+.header {
+  display: block;
+  background-color: rgba(170, 170, 170, 0.5);
+}
+.prvired {
+  display: flex;
+  width: auto;
+}
+.donjired {
+  background: white;
+}
+
+#textleft {
+  flex-grow: 1;
+  text-align: left;
+}
+#name {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: red;
+  padding-top: 15px;
+}
+#textright {
+  flex-grow: 1;
+  text-align: right;
+}
+
+nav {
+  display: flex;
+  border-top: 1px solid red;
+  font-size: 30px;
+  width: auto;
+}
+@media (max-width: 750px) {
+nav { font-size: 10px; display: flex; border: 1px solid red; width: auto; font-weight: bold}
+}
+nav > div {
+  flex-basis: 0;
+  flex-grow: 1;
+  position: relative;
+  border-right: 1px solid red;
+  border-bottom: 1px solid red;
+}
+nav > div:last-child {
+  border-right: none;
+}
+nav > div > a {
+  display: block;
+  padding: 10px 0px;
+  text-align: center;
+  text-decoration: none;
+  color: red;
+  transition: 200ms;
+}
+nav > div > a:hover {
+  background-color: red;
+  color: white;
+  transition: 150ms;
+  border: 1px solid white;
+}
+nav > div > div > a {
+  display: block;
+  padding: 10px 19px;
+  text-decoration: none;
+  color: red;
+}
+nav > div > div > a:hover {
+  background-color: red;
+  color: white;
+}
+nav > div > div {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border: 1px solid red;
+  border-top: none;
+  left: -1px;
+}
+nav > div:hover > div {
+  display: block;
+}
+#mainpage > h1 {
+  text-align: center;
+  color: red;
+}
+.boss {
+  display: grid;
+  grid-template: "a b"
+                 "c c";
+  grid-template-columns: auto auto;
+  background-color: rgba(170, 170, 170, 0.5);
+
+}
+#red-a {
+  grid-area: a;
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+#red-b {
+  grid-area: b;
+  padding: 20px;
+  margin-left: 50px;
+}
+#red-c {
+  grid-area: c;
+  margin-left: 10px;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+@media (max-width: 750px) {
+  #red-a { grid-area: a; margin-left: 5px; font-size: 15px}
+  #red-c { grid-area: c; margin-left: 5px; font-size: 15px}
+}
+#red-b img {
+  padding: 10px;
+  animation-duration: 10s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+   opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+.donjired a.active {
+  background-color: red;
+  color: white;
+}
+.naslov > p {
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.naslov > li:hover {
+  font-size: 25px;
+  font-weight: bold;
+}
+@media (max-width: 600px) {
+ .naslov > li:hover {font-size: 15px; font-weight: bold}
+}
